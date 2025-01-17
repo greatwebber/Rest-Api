@@ -18,6 +18,15 @@ class JwtMiddleware
      */
     public function handle($request, Closure $next)
     {
+        $excludedPaths = [
+            'api/register',
+            'api/login'
+        ];
+
+        if (in_array($request->path(), $excludedPaths)) {
+            return $next($request);
+        }
+
         try {
             $user = JWTAuth::parseToken()->authenticate();
         } catch (JWTException $e) {

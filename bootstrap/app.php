@@ -15,6 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         //
         $middleware->append(JwtMiddleware::class);
+        $middleware->append(\App\Http\Middleware\LogActivity::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

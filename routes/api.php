@@ -19,7 +19,7 @@ Route::middleware('throttle:global')->group(function () {
         Route::get('user', [AuthController::class, 'getUser']);
         Route::post('logout', [AuthController::class, 'logout']);
 
-        Route::get('/posts', [PostController::class, 'index']);
-        Route::post('/posts', [PostController::class, 'store']);
+        Route::resource('posts',PostController::class);
+
     });
 });
