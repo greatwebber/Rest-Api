@@ -10,3 +10,6 @@ This project includes a Postman Collection for testing API endpoints. You can im
 
 ### File Location:
 The Postman Collection is located in the `postman` directory of this repository.
+
+### Activity Logs:
+The Activity log is saving on the database which i have provide the screenshot for it Screenshot 2025-01-17 at 6.52.01 PM.png
